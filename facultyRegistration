@@ -1,0 +1,234 @@
+
+scri<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create New Account</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        text-align: center;
+        position: relative;
+    }
+    .slide-bar {
+        width: 100%;
+        height: 50px;
+        background-color: #007bff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
+    .slide-bar-text {
+        color: #fff;
+        font-size: 20px;
+        line-height: 50px;
+        float: right;
+        margin-right: 10px;
+    }
+    .back-arrow {
+        color: #fff;
+        font-size: 24px;
+        line-height: 50px;
+        float: left;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+    .create-account-container {
+        width: 40%;
+        margin: 50px auto;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+    }
+    .box-link {
+        background-color: #007bff;
+        color: #fff;
+        padding: 0px 0px;
+        border-radius: 5px;
+        cursor: pointer;
+        position: absolute;
+        top: -40px;
+        right: 20px;
+    }
+    .img-container {
+        margin-top: 50px;
+    }
+    .img-container img {
+        width: 30%;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    }
+    .college-name {
+        font-size: 30px;
+        font-weight: bold;
+        margin-top: 15px;
+        color: #0056b3;
+    }
+    .options {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 50px;
+    }
+    .option {
+        width: 40%;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+    }
+    .option-title {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    .option-link {
+        display: block;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+        padding: 3px;
+        border-radius: 1px;
+        margin-top: 1px;
+    }
+    .form-group {
+        margin-bottom: 20px;
+        text-align: left;
+    }
+    .form-group label {
+        display: block;
+        font-weight: bold;
+    }
+    .form-group input {
+        width: 100%;
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    .checkbox-label {
+        display: inline-block;
+        margin-left: 5px;
+    }
+    .register-btn {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+<div class="slide-bar">
+    <a href="newaccountbackarrow.html" class="back-arrow"><img src="images.png" width="20%" height="20%"></a>
+    <div class="slide-bar-text">Grade Tracker</div>
+</div>
+
+<div class="create-account-container">
+    <div class="box-link">Grade Tracker</div>
+    <div class="img-container">
+        <img src="C:\Users\ELCOT\Desktop\Mini project\logo.png" alt="Image">
+        <p class="college-name">K. RAMAKRISHNAN<br> COLLEGE OF ENGINEERING<br> (AUTONOMOUS)</p>
+    </div><br>
+    <h3> Create your new account as</h3>
+    <div class="options">
+        <div class="option">
+            <div class="option-title">Faculty</div>
+            <a href="" class="option-link"></a><br>
+        
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+        </div>
+        <div class="form-group">
+            <label for="student-pin">Faculty Pin:</label>
+            <input type="text" id="Faculty-pin" name="Faculty-pin" required><br>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+        </div>
+        <div class="form-group">
+            <label for="confirm-pin">Confirm Password:</label>
+            <input type="password" id="confirm-pin" name="confirm-password" required><br>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" id="agree-terms" name="agree-terms" required>
+            <label for="agree-terms" class="checkbox-label">I agree to the terms and conditions</label><br>
+        </div>
+       
+        <button type="submit" class="register-btn">Register</button>
+    </div>
+    </form>
+</div>
+</div>
+</div>
+
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-analytics.js";
+    //import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-database.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyBYbRZDaiRyETneXoSO-ibCyelQkYKFj08",
+      authDomain: "student-d3346.firebaseapp.com",
+      projectId: "student-d3346",
+      storageBucket: "student-d3346.appspot.com",
+      messagingSenderId: "1032193572328",
+      appId: "1:1032193572328:web:26db4f70597237e17d785d",
+      measurementId: "G-TF394SD48X"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    import {getDatabase, ref, get, set, child, update, remove}
+        from  "https://www.gstatic.com/firebasejs/9.18.0/firebase-database.js";
+        const db = getDatabase();
+        
+        
+        var name = document.querySelector("#name");
+        var email = document.querySelector("#email");
+        var facultypin = document.querySelector("#faculty-pin");
+        var password = document.querySelector("#password");
+        var confirmpin = document.querySelector("#confirm-pin");
+
+        
+        function InsertData() {
+            set(ref(db, "teachers/"+ name.value),{
+                teachername: name.value,
+                password: password.value,
+                email: email.value,
+                facultypin: facultypin.value,
+                confirmpin: confirmpin.value
+
+               
+            })
+            .then(()=>{
+                alert("Data added successfully");
+            })
+            .catch((error)=>{
+                alert(error);
+            });
+        }
+          document.querySelector(".register-btn").addEventListener('click', InsertData);
+    </script>
+</body>
+</html>
